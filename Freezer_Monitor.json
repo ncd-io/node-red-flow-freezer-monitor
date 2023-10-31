@@ -1,6 +1,6 @@
 [
     {
-        "id": "81221545cfddd907",
+        "id": "47d1da89a8c6d7b8",
         "type": "tab",
         "label": "Freezer Monitor",
         "disabled": false,
@@ -8,9 +8,9 @@
         "env": []
     },
     {
-        "id": "dfbfa5c5c8166a5e",
+        "id": "ecb81b48c860720f",
         "type": "ncd-gateway-node",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "",
         "connection": "3a158777559a1790",
         "unknown_devices": 0,
@@ -19,14 +19,14 @@
         "y": 360,
         "wires": [
             [
-                "5b9f4eeb96af4658"
+                "37a98b840cd04c9d"
             ]
         ]
     },
     {
-        "id": "5b9f4eeb96af4658",
+        "id": "37a98b840cd04c9d",
         "type": "debug",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
@@ -40,28 +40,10 @@
         "wires": []
     },
     {
-        "id": "16aa7757b89c8498",
-        "type": "remote-access",
-        "z": "81221545cfddd907",
-        "confignode": "e4819a7afd75922a",
-        "name": "",
-        "verbose": true,
-        "x": 120,
-        "y": 460,
-        "wires": [
-            [
-                "fbecb0a385f2249b"
-            ],
-            [
-                "cd8a1582cadd0532"
-            ]
-        ]
-    },
-    {
-        "id": "235c5c02c8aedd52",
+        "id": "0926adef588ae0b7",
         "type": "remote-notification",
-        "z": "81221545cfddd907",
-        "confignode": "e4819a7afd75922a",
+        "z": "47d1da89a8c6d7b8",
+        "confignode": "6de7172f91e62729",
         "name": "Send",
         "notificationTitle": "Freezer Alarm",
         "notificationTitleType": "str",
@@ -75,14 +57,14 @@
         "y": 240,
         "wires": [
             [
-                "c0b84e920a7beae3"
+                "fab5528a154b844b"
             ]
         ]
     },
     {
-        "id": "e6fcbbff1d489360",
+        "id": "a5fa9851a87f8767",
         "type": "ncd-wireless-node",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "",
         "connection": "3a158777559a1790",
         "config_comm": "3a158777559a1790",
@@ -201,14 +183,14 @@
         "y": 200,
         "wires": [
             [
-                "6109eb63c098da43"
+                "5220613319f0f492"
             ]
         ]
     },
     {
-        "id": "c8fffac0e865981f",
+        "id": "7db4ea86e054fad2",
         "type": "debug",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "debug 2",
         "active": true,
         "tosidebar": true,
@@ -223,11 +205,11 @@
         "wires": []
     },
     {
-        "id": "2178d89632e2b973",
+        "id": "c508bdac656411d3",
         "type": "ui_gauge",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "",
-        "group": "b1883470c1c69b7b",
+        "group": "c3718ccd5d56c2c1",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -251,9 +233,9 @@
         "wires": []
     },
     {
-        "id": "6109eb63c098da43",
+        "id": "5220613319f0f492",
         "type": "function",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "Convert to ºF",
         "func": "msg.payload.temperature = Math.round((msg.payload.temperature * 1.8 + 32) * 100) / 100;\nreturn msg;",
         "outputs": 1,
@@ -265,18 +247,18 @@
         "y": 200,
         "wires": [
             [
-                "c8fffac0e865981f",
-                "5fa2d3ea6c7bd375",
-                "900fa25b405db6cc",
-                "1d1f6618f17dd2f2",
-                "e8e11592b340e4ed"
+                "7db4ea86e054fad2",
+                "6f6684e4028818ac",
+                "402d41e326b0308d",
+                "20f366b2fadb6a0a",
+                "4cd97c8301e8b097"
             ]
         ]
     },
     {
-        "id": "5fa2d3ea6c7bd375",
+        "id": "6f6684e4028818ac",
         "type": "change",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "",
         "rules": [
             {
@@ -296,48 +278,16 @@
         "y": 160,
         "wires": [
             [
-                "2178d89632e2b973",
-                "1da5e1d751439ca4"
+                "c508bdac656411d3",
+                "4121d22d00d1220c"
             ]
         ]
     },
     {
-        "id": "fbecb0a385f2249b",
-        "type": "debug",
-        "z": "81221545cfddd907",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 300,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "cd8a1582cadd0532",
-        "type": "debug",
-        "z": "81221545cfddd907",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 300,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "4bae9e5b82d8ff69",
+        "id": "f522814aa301de0a",
         "type": "ui_text",
-        "z": "81221545cfddd907",
-        "group": "b1883470c1c69b7b",
+        "z": "47d1da89a8c6d7b8",
+        "group": "c3718ccd5d56c2c1",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -351,9 +301,9 @@
         "wires": []
     },
     {
-        "id": "900fa25b405db6cc",
+        "id": "402d41e326b0308d",
         "type": "function",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "Set Date/Time",
         "func": "// Create a Date object with the current date and time\nconst now = new Date();\n\n// Specify the timezone offset for Central Time (Central Standard Time: UTC-6, Central Daylight Time: UTC-5)\nconst centralTimezoneOffset = -5*60; // For Central Daylight Time (CDT)\n\n// Calculate the offset in minutes\nconst offsetInMinutes = now.getTimezoneOffset();\n\n// Adjust the time to the Central Timezone\nconst centralTime = new Date(msg.time + (offsetInMinutes + centralTimezoneOffset) * 60000);\n\n// Extract the components (month, day, year, hours, minutes, seconds)\nconst month = centralTime.getMonth() + 1; // Months are zero-based, so we add 1\nconst day = centralTime.getDate();\nconst year = centralTime.getFullYear();\nconst hours = centralTime.getHours();\nconst minutes = centralTime.getMinutes();\nconst seconds = centralTime.getSeconds();\n\n// Format the date and time as \"MM/DD/YYYY HH:MM:SS\"\nconst formattedDateTime = `${month.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}/${year} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;\n\nmsg.payload = formattedDateTime;\nreturn msg;",
         "outputs": 1,
@@ -365,16 +315,16 @@
         "y": 200,
         "wires": [
             [
-                "4bae9e5b82d8ff69"
+                "f522814aa301de0a"
             ]
         ]
     },
     {
-        "id": "1da5e1d751439ca4",
+        "id": "4121d22d00d1220c",
         "type": "ui_chart",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "",
-        "group": "b1883470c1c69b7b",
+        "group": "c3718ccd5d56c2c1",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -414,9 +364,9 @@
         ]
     },
     {
-        "id": "237e9b1e2c9a422a",
+        "id": "090f55c061922aba",
         "type": "function",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "Initialize Variables",
         "func": "\nreturn msg;",
         "outputs": 1,
@@ -431,9 +381,9 @@
         ]
     },
     {
-        "id": "1d1f6618f17dd2f2",
+        "id": "20f366b2fadb6a0a",
         "type": "switch",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "High Alarm",
         "property": "high_alarm_triggered",
         "propertyType": "flow",
@@ -449,14 +399,14 @@
         "y": 240,
         "wires": [
             [
-                "0fda27dca0bd3d05"
+                "5b3740e424ae6b51"
             ]
         ]
     },
     {
-        "id": "0fda27dca0bd3d05",
+        "id": "5b3740e424ae6b51",
         "type": "switch",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "º Check",
         "property": "payload.temperature",
         "propertyType": "msg",
@@ -474,14 +424,14 @@
         "y": 240,
         "wires": [
             [
-                "235c5c02c8aedd52"
+                "0926adef588ae0b7"
             ]
         ]
     },
     {
-        "id": "c0b84e920a7beae3",
+        "id": "fab5528a154b844b",
         "type": "switch",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "Notify Success?",
         "property": "payload",
         "propertyType": "msg",
@@ -497,14 +447,14 @@
         "y": 240,
         "wires": [
             [
-                "d379219951e7687b"
+                "33a2be59ac8aeb39"
             ]
         ]
     },
     {
-        "id": "d379219951e7687b",
+        "id": "33a2be59ac8aeb39",
         "type": "change",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "Set Variables",
         "rules": [
             {
@@ -534,9 +484,9 @@
         ]
     },
     {
-        "id": "e8e11592b340e4ed",
+        "id": "4cd97c8301e8b097",
         "type": "switch",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "Normal Alarm",
         "property": "normal_alarm_triggered",
         "propertyType": "flow",
@@ -552,14 +502,14 @@
         "y": 280,
         "wires": [
             [
-                "630573bdf2905553"
+                "6b683427d68a3f2a"
             ]
         ]
     },
     {
-        "id": "630573bdf2905553",
+        "id": "6b683427d68a3f2a",
         "type": "switch",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "º Check",
         "property": "payload.temperature",
         "propertyType": "msg",
@@ -577,15 +527,15 @@
         "y": 280,
         "wires": [
             [
-                "a13b1feb51d08e3c"
+                "46446019e173de0f"
             ]
         ]
     },
     {
-        "id": "a13b1feb51d08e3c",
+        "id": "46446019e173de0f",
         "type": "remote-notification",
-        "z": "81221545cfddd907",
-        "confignode": "e4819a7afd75922a",
+        "z": "47d1da89a8c6d7b8",
+        "confignode": "6de7172f91e62729",
         "name": "Send",
         "notificationTitle": "Freezer Normal",
         "notificationTitleType": "str",
@@ -599,14 +549,14 @@
         "y": 280,
         "wires": [
             [
-                "6848b4bd795e8a18"
+                "3201aed0498b2573"
             ]
         ]
     },
     {
-        "id": "6848b4bd795e8a18",
+        "id": "3201aed0498b2573",
         "type": "switch",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "Notify Success?",
         "property": "payload",
         "propertyType": "msg",
@@ -622,14 +572,14 @@
         "y": 280,
         "wires": [
             [
-                "90a41fea9038460d"
+                "7da9708f42bb95cf"
             ]
         ]
     },
     {
-        "id": "90a41fea9038460d",
+        "id": "7da9708f42bb95cf",
         "type": "change",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "Set Variables",
         "rules": [
             {
@@ -659,9 +609,9 @@
         ]
     },
     {
-        "id": "9771498ed6944d1c",
+        "id": "08181226523de969",
         "type": "inject",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "High",
         "props": [
             {
@@ -684,14 +634,14 @@
         "y": 140,
         "wires": [
             [
-                "6109eb63c098da43"
+                "5220613319f0f492"
             ]
         ]
     },
     {
-        "id": "a3c8bd6ecc14701c",
+        "id": "0286562ed8503627",
         "type": "inject",
-        "z": "81221545cfddd907",
+        "z": "47d1da89a8c6d7b8",
         "name": "Normal",
         "props": [
             {
@@ -714,7 +664,7 @@
         "y": 260,
         "wires": [
             [
-                "6109eb63c098da43"
+                "5220613319f0f492"
             ]
         ]
     },
@@ -731,7 +681,7 @@
         "rssi": true
     },
     {
-        "id": "e4819a7afd75922a",
+        "id": "6de7172f91e62729",
         "type": "remote-config",
         "name": "Node-RED UI",
         "host": "localhost",
@@ -743,10 +693,10 @@
         "region": "us"
     },
     {
-        "id": "b1883470c1c69b7b",
+        "id": "c3718ccd5d56c2c1",
         "type": "ui_group",
         "name": "Freezer",
-        "tab": "4f2e9bfab92b5ad6",
+        "tab": "d270f6ecf189325b",
         "order": 1,
         "disp": true,
         "width": "6",
@@ -754,7 +704,7 @@
         "className": ""
     },
     {
-        "id": "4f2e9bfab92b5ad6",
+        "id": "d270f6ecf189325b",
         "type": "ui_tab",
         "name": "Home",
         "icon": "dashboard",
