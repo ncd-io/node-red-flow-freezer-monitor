@@ -1,0 +1,764 @@
+[
+    {
+        "id": "81221545cfddd907",
+        "type": "tab",
+        "label": "Freezer Monitor",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dfbfa5c5c8166a5e",
+        "type": "ncd-gateway-node",
+        "z": "81221545cfddd907",
+        "name": "",
+        "connection": "3a158777559a1790",
+        "unknown_devices": 0,
+        "outputs": 1,
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "5b9f4eeb96af4658"
+            ]
+        ]
+    },
+    {
+        "id": "5b9f4eeb96af4658",
+        "type": "debug",
+        "z": "81221545cfddd907",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "16aa7757b89c8498",
+        "type": "remote-access",
+        "z": "81221545cfddd907",
+        "confignode": "e4819a7afd75922a",
+        "name": "",
+        "verbose": true,
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "fbecb0a385f2249b"
+            ],
+            [
+                "cd8a1582cadd0532"
+            ]
+        ]
+    },
+    {
+        "id": "235c5c02c8aedd52",
+        "type": "remote-notification",
+        "z": "81221545cfddd907",
+        "confignode": "e4819a7afd75922a",
+        "name": "Send",
+        "notificationTitle": "Freezer Alarm",
+        "notificationTitleType": "str",
+        "notificationBody": "payload.temperature",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": "2",
+        "x": 770,
+        "y": 240,
+        "wires": [
+            [
+                "c0b84e920a7beae3"
+            ]
+        ]
+    },
+    {
+        "id": "e6fcbbff1d489360",
+        "type": "ncd-wireless-node",
+        "z": "81221545cfddd907",
+        "name": "",
+        "connection": "3a158777559a1790",
+        "config_comm": "3a158777559a1790",
+        "addr": "00:13:a2:00:42:37:4f:74",
+        "sensor_type": "1",
+        "auto_config": true,
+        "on_the_fly_enable": "",
+        "node_id_delay_active": true,
+        "node_id": 0,
+        "delay": "30",
+        "form_network": "",
+        "destination_active": "",
+        "destination": "0000FFFF",
+        "power_active": "",
+        "power": 4,
+        "retries_active": "",
+        "retries": 10,
+        "pan_id_active": "",
+        "pan_id": "7FFF",
+        "change_enabled": "",
+        "change_pr": "0",
+        "change_interval": "0",
+        "cm_calibration": "60.6",
+        "bp_altitude": "0",
+        "bp_pressure": "0",
+        "bp_temp_prec": "0",
+        "bp_press_prec": "0",
+        "amgt_accel": "0",
+        "amgt_mag": "0",
+        "amgt_gyro": "0",
+        "impact_accel": "0",
+        "impact_data_rate": "4",
+        "impact_threshold": 25,
+        "impact_duration": 1,
+        "activ_interr_x": 1,
+        "activ_interr_y": 2,
+        "activ_interr_z": 4,
+        "activ_interr_op": 8,
+        "force_calibration_co2_auto_config": "",
+        "force_calibration_co2": 400,
+        "filtering": 0,
+        "data_rate": 5,
+        "time_series": 0,
+        "reading_type": 1,
+        "mode_80_active": "",
+        "mode_80": 0,
+        "measurement_mode_80_active": "",
+        "measurement_mode_80": 0,
+        "on_request_timeout_80_active": "",
+        "on_request_timeout_80": 1,
+        "sensor_boot_time_420ma_active": "",
+        "sensor_boot_time_420ma": 0,
+        "deadband_80_active": "",
+        "deadband_80": 0,
+        "filter_80_active": "",
+        "filter_80": 0,
+        "output_data_rate_p1_81_active": "",
+        "output_data_rate_p1_81": 0,
+        "output_data_rate_p2_81_active": "",
+        "output_data_rate_p2_81": 0,
+        "sampling_duration_p1_81_active": "",
+        "sampling_duration_p1_81": 0,
+        "sampling_duration_p2_81_active": "",
+        "sampling_duration_p2_81": 0,
+        "led_alert_mode_84_active": "",
+        "led_alert_mode_84": 0,
+        "led_accelerometer_threshold_84_active": "",
+        "led_accelerometer_threshold_84": "",
+        "led_velocity_threshold_84_active": "",
+        "led_velocity_threshold_84": "",
+        "acceleration_interrupt_threshold_84_active": "",
+        "acceleration_interrupt_threshold_84": "",
+        "set_rtc_101": 0,
+        "current_calibration_82": "",
+        "current_calibration_82_active": false,
+        "current_calibration_c1_80": 178,
+        "current_calibration_c1_80_active": "",
+        "current_calibration_c2_80": 178,
+        "current_calibration_c2_80_active": "",
+        "current_calibration_c3_80": 178,
+        "current_calibration_c3_80_active": "",
+        "output_data_rate_101_active": "",
+        "output_data_rate_101": 0,
+        "output_data_rate_101_m2_active": "",
+        "output_data_rate_101_m2": 0,
+        "sampling_duration_101_active": "",
+        "sampling_duration_101": 1,
+        "sampling_interval_101_active": "",
+        "sampling_interval_101": 1,
+        "full_scale_range_101_active": "",
+        "full_scale_range_101": 1,
+        "full_scale_range_101_m2_active": "",
+        "full_scale_range_101_m2": 1,
+        "x_axis_101": "",
+        "y_axis_101": "",
+        "z_axis_101": "",
+        "low_pass_filter_80_active": "",
+        "low_pass_filter_80": 0,
+        "high_pass_filter_80_active": "",
+        "high_pass_filter_80": 0,
+        "low_pass_filter_81_p2_active": "",
+        "low_pass_filter_81_p2": 0,
+        "high_pass_filter_81_p2_active": "",
+        "high_pass_filter_81_p2": 0,
+        "roll_angle_threshold_47": 0,
+        "roll_angle_threshold_47_active": "",
+        "pitch_angle_threshold_47": 0,
+        "pitch_angle_threshold_47_active": "",
+        "counter_threshold_35": 50,
+        "counter_threshold_35_active": "",
+        "payload_length_80_active": "",
+        "payload_length_80": 3,
+        "motion_threshold_46_active": "",
+        "motion_threshold_46": 100,
+        "x": 100,
+        "y": 200,
+        "wires": [
+            [
+                "6109eb63c098da43"
+            ]
+        ]
+    },
+    {
+        "id": "c8fffac0e865981f",
+        "type": "debug",
+        "z": "81221545cfddd907",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2178d89632e2b973",
+        "type": "ui_gauge",
+        "z": "81221545cfddd907",
+        "name": "",
+        "group": "b1883470c1c69b7b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Freezer Temperature",
+        "label": "ºF",
+        "format": "{{value}}",
+        "min": "-10",
+        "max": "80",
+        "colors": [
+            "#ff2600",
+            "#00b500",
+            "#ff2600"
+        ],
+        "seg1": "20",
+        "seg2": "32",
+        "diff": false,
+        "className": "",
+        "x": 740,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "6109eb63c098da43",
+        "type": "function",
+        "z": "81221545cfddd907",
+        "name": "Convert to ºF",
+        "func": "msg.payload.temperature = Math.round((msg.payload.temperature * 1.8 + 32) * 100) / 100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 200,
+        "wires": [
+            [
+                "c8fffac0e865981f",
+                "5fa2d3ea6c7bd375",
+                "900fa25b405db6cc",
+                "1d1f6618f17dd2f2",
+                "e8e11592b340e4ed"
+            ]
+        ]
+    },
+    {
+        "id": "5fa2d3ea6c7bd375",
+        "type": "change",
+        "z": "81221545cfddd907",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperature",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 160,
+        "wires": [
+            [
+                "2178d89632e2b973",
+                "1da5e1d751439ca4"
+            ]
+        ]
+    },
+    {
+        "id": "fbecb0a385f2249b",
+        "type": "debug",
+        "z": "81221545cfddd907",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "cd8a1582cadd0532",
+        "type": "debug",
+        "z": "81221545cfddd907",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "4bae9e5b82d8ff69",
+        "type": "ui_text",
+        "z": "81221545cfddd907",
+        "group": "b1883470c1c69b7b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Last Updated:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 720,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "900fa25b405db6cc",
+        "type": "function",
+        "z": "81221545cfddd907",
+        "name": "Set Date/Time",
+        "func": "// Create a Date object with the current date and time\nconst now = new Date();\n\n// Specify the timezone offset for Central Time (Central Standard Time: UTC-6, Central Daylight Time: UTC-5)\nconst centralTimezoneOffset = -5*60; // For Central Daylight Time (CDT)\n\n// Calculate the offset in minutes\nconst offsetInMinutes = now.getTimezoneOffset();\n\n// Adjust the time to the Central Timezone\nconst centralTime = new Date(msg.time + (offsetInMinutes + centralTimezoneOffset) * 60000);\n\n// Extract the components (month, day, year, hours, minutes, seconds)\nconst month = centralTime.getMonth() + 1; // Months are zero-based, so we add 1\nconst day = centralTime.getDate();\nconst year = centralTime.getFullYear();\nconst hours = centralTime.getHours();\nconst minutes = centralTime.getMinutes();\nconst seconds = centralTime.getSeconds();\n\n// Format the date and time as \"MM/DD/YYYY HH:MM:SS\"\nconst formattedDateTime = `${month.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}/${year} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;\n\nmsg.payload = formattedDateTime;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "4bae9e5b82d8ff69"
+            ]
+        ]
+    },
+    {
+        "id": "1da5e1d751439ca4",
+        "type": "ui_chart",
+        "z": "81221545cfddd907",
+        "name": "",
+        "group": "b1883470c1c69b7b",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "80",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 690,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "237e9b1e2c9a422a",
+        "type": "function",
+        "z": "81221545cfddd907",
+        "name": "Initialize Variables",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"high_alarm_triggered\",false);\nflow.set(\"normal_alarm_triggered\", true);",
+        "finalize": "",
+        "libs": [],
+        "x": 130,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1d1f6618f17dd2f2",
+        "type": "switch",
+        "z": "81221545cfddd907",
+        "name": "High Alarm",
+        "property": "high_alarm_triggered",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 240,
+        "wires": [
+            [
+                "0fda27dca0bd3d05"
+            ]
+        ]
+    },
+    {
+        "id": "0fda27dca0bd3d05",
+        "type": "switch",
+        "z": "81221545cfddd907",
+        "name": "º Check",
+        "property": "payload.temperature",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "32.00",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 240,
+        "wires": [
+            [
+                "235c5c02c8aedd52"
+            ]
+        ]
+    },
+    {
+        "id": "c0b84e920a7beae3",
+        "type": "switch",
+        "z": "81221545cfddd907",
+        "name": "Notify Success?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 920,
+        "y": 240,
+        "wires": [
+            [
+                "d379219951e7687b"
+            ]
+        ]
+    },
+    {
+        "id": "d379219951e7687b",
+        "type": "change",
+        "z": "81221545cfddd907",
+        "name": "Set Variables",
+        "rules": [
+            {
+                "t": "set",
+                "p": "high_alarm_triggered",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "normal_alarm_triggered",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e8e11592b340e4ed",
+        "type": "switch",
+        "z": "81221545cfddd907",
+        "name": "Normal Alarm",
+        "property": "normal_alarm_triggered",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 280,
+        "wires": [
+            [
+                "630573bdf2905553"
+            ]
+        ]
+    },
+    {
+        "id": "630573bdf2905553",
+        "type": "switch",
+        "z": "81221545cfddd907",
+        "name": "º Check",
+        "property": "payload.temperature",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "30.00",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 660,
+        "y": 280,
+        "wires": [
+            [
+                "a13b1feb51d08e3c"
+            ]
+        ]
+    },
+    {
+        "id": "a13b1feb51d08e3c",
+        "type": "remote-notification",
+        "z": "81221545cfddd907",
+        "confignode": "e4819a7afd75922a",
+        "name": "Send",
+        "notificationTitle": "Freezer Normal",
+        "notificationTitleType": "str",
+        "notificationBody": "payload.temperature",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": "2",
+        "x": 790,
+        "y": 280,
+        "wires": [
+            [
+                "6848b4bd795e8a18"
+            ]
+        ]
+    },
+    {
+        "id": "6848b4bd795e8a18",
+        "type": "switch",
+        "z": "81221545cfddd907",
+        "name": "Notify Success?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 940,
+        "y": 280,
+        "wires": [
+            [
+                "90a41fea9038460d"
+            ]
+        ]
+    },
+    {
+        "id": "90a41fea9038460d",
+        "type": "change",
+        "z": "81221545cfddd907",
+        "name": "Set Variables",
+        "rules": [
+            {
+                "t": "set",
+                "p": "normal_alarm_triggered",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "high_alarm_triggered",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1110,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9771498ed6944d1c",
+        "type": "inject",
+        "z": "81221545cfddd907",
+        "name": "High",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "time",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"humidity\":24.79,\"temperature\":23.94}",
+        "payloadType": "json",
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "6109eb63c098da43"
+            ]
+        ]
+    },
+    {
+        "id": "a3c8bd6ecc14701c",
+        "type": "inject",
+        "z": "81221545cfddd907",
+        "name": "Normal",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "time",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"humidity\":24.79,\"temperature\":-2}",
+        "payloadType": "json",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "6109eb63c098da43"
+            ]
+        ]
+    },
+    {
+        "id": "3a158777559a1790",
+        "type": "ncd-gateway-config",
+        "name": "",
+        "comm_type": "serial",
+        "ip_address": "",
+        "tcp_port": "2101",
+        "port": "/dev/ttymxc2",
+        "baudRate": "115200",
+        "pan_id": "7FFF",
+        "rssi": true
+    },
+    {
+        "id": "e4819a7afd75922a",
+        "type": "remote-config",
+        "name": "Node-RED UI",
+        "host": "localhost",
+        "protocol": "http",
+        "port": "1880",
+        "baseurl": "/ui",
+        "instancehash": "ijakodtasb30h0puyvop3fo3r37vwt5qexme8qsq7tudrnst8v84yhiev0fr72ld",
+        "server": "nodered03.remote-red.com",
+        "region": "us"
+    },
+    {
+        "id": "b1883470c1c69b7b",
+        "type": "ui_group",
+        "name": "Freezer",
+        "tab": "4f2e9bfab92b5ad6",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4f2e9bfab92b5ad6",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
